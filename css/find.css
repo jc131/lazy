@@ -1,0 +1,235 @@
+.mui-active{
+	color: #F39C11 !important;
+}
+.mui-segmented-control-inverted{
+	font-size: 20px;
+	padding: 0 40px;
+	font-weight: 900;
+}
+.mui-col-xs-3{
+	padding: 0 40px;
+}
+.mui-slider-progress-bar{
+	height: 5px;
+	background: #F39C11 !important;
+	padding: 0 40px;
+	margin: 0 auto;
+}
+/*主播开始*/
+/*轮播图开始*/
+#slider{
+	padding: 15px 0;
+	background: #FFFFFF;
+}
+#slider img{
+	width: 100%;
+	height: 150px;
+}
+/*轮播图结束*/
+/*热门话题开始*/
+.huati{
+	width: 100%;
+	padding: 15px 0 0 0;
+	background: #FFFFFF;
+}
+.huatiTop{
+	display: flex;
+	justify-content: space-between;
+	color: #000000;
+}
+.huatiTop h4{
+	border-left: 5px solid #F39C11;
+	padding-left: 10px;
+}
+.huatiTop p{
+	padding-right: 10px;
+}
+.huatiBottom{
+	list-style: none;
+	height: 100px;
+	/*background: pink;*/
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 0;
+}
+.huatiBottom li{
+	width: 40%;
+	height: 40%;
+	/*background: oldlace;*/
+	display: flex;
+	align-items: center;
+	color: #333333;
+}
+.huatiBottom li b{
+	color: #F39C11;
+	margin-right: 10px;
+}
+/*热门话题结束*/
+/*听友会开始*/
+.mui-slider-item{
+	border: none !important;
+}
+.ting{
+	background: #FFFFFF;
+	padding: 15px 0;
+}
+.youhui{
+	width: 80%;
+	/*height: 150px;*/
+	background: #FFFFFF;
+	border-radius: 10px;
+	border: 1px solid #a8a8a8;
+	border-top: 5px solid #F39C11;
+	margin: 0 auto;
+	/*margin-left: 10px;*/
+	padding: 10px;
+}
+.youpic{
+	width: 40px;
+	height: 40px;
+	background: palegoldenrod;
+}
+.youCon{
+	display: flex;
+	justify-content: flex-start;
+	height: 50px;
+	align-items: center;
+}
+.youCon h4{
+	color: #000000;
+	margin-left: 15px;
+}
+.youCon p{
+	margin-left: 100px;
+	margin-top: 10px;
+}
+/*听友会结束*/
+/*听友结束*/
+/*?????????????????????????????????????????????????????????*/
+/*主播开始*/
+.zhubo{
+	width: 100%;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-around;
+	background: #FFFFFF;
+}
+.zhubo img{
+	width: 100%;
+	height: 100%;
+}
+.zhuboL{
+	width: 40%;
+	height: 70px;
+}
+.zhuboR{
+	width: 40%;
+	height: 70px;
+}
+/*主播结束*/
+/*推荐主播开始*/
+.tuijian{
+	background: #FFFFFF;
+	padding: 15px 0 0 0;
+}
+.tuijianC{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+}
+.tuijianC li{
+	width: 20%;
+	/*background: pink;*/
+	text-align: center;
+	padding: 10px 0;
+}
+.tuijianC li div{
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+.tuijianC li div img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.tuijianC li p{
+	color: #000;
+	margin-top: 10px;
+}
+/*推荐主播结束*/
+/*福利开始*/
+.xianm{
+	width: 100%;
+	background: #FFFFFF;
+	padding: 15px 0 0 0;
+}
+.xiang{
+	width: 100%;
+	justify-content: flex-start;
+	display: flex;
+	padding: 15px;
+}
+.xiangl{
+	width: 25%;
+	height: 120px;
+}
+.xiangr{
+	margin-left: 10px;
+}
+.xiangr h4{
+	color: #000;
+}
+.xiangr div{
+	color: #878787;
+}
+.tao{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+}
+.tao li{
+	width: 20%;
+	/*background: pink;*/
+	font-size: 12px;
+}
+.tao li img{
+	width: 100%;
+	height: 90px;
+}
+.tao li p{
+	color: #000;
+}
+/*福利结束*/
+/*活动开始*/
+.huo{
+	width: 100%;
+	background: #FFFFFF;
+	padding: 15px  15px 0 15px;
+}
+.huo h4{
+	color: #000;
+}
+.huo img{
+	width: 80%;
+	margin: 0 auto;
+	height: 100px;
+}
+.ju{
+	display: flex;
+	justify-content: space-between;
+}
+.con{
+	color: #878787;
+}
+.con i{
+	color: #F39C11;
+	margin-right: 10px;
+}
+.ha{
+	margin-top: 10px;
+}
+/*活动结束*/

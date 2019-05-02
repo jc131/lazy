@@ -1,100 +1,141 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title></title>
-    <script src="js/mui.min.js"></script>
-    <link href="css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" charset="utf-8">
-      	mui.init();
-    </script>
-</head>
-<body>
-	<nav class="mui-bar mui-bar-tab">
-	    <a class="mui-tab-item mui-active" href="src/Listen.html">
-	        <span class="mui-icon mui-icon-home"></span>
-	        <span class="mui-tab-label">听吧</span>
-	    </a>
-	    <a class="mui-tab-item" href="src/my.html">
-	        <span class="mui-icon mui-icon-phone"></span>
-	        <span class="mui-tab-label">我的</span>
-	    </a>
-	   
-	    <a class="mui-tab-item" href="src/play.html">
-	        <span class="mui-icon mui-icon-gear"></span>
-	        <span class="mui-tab-label">播发</span>
-	    </a>
-	    <a class="mui-tab-item" href="src/find.html">
-	        <span class="mui-icon mui-icon-gear"></span>
-	        <span class="mui-tab-label">发现</span>
-	    </a>
-		 <a class="mui-tab-item" href="src/Account.html">
-		    <span class="mui-icon mui-icon-gear"></span>
-		    <span class="mui-tab-label">账号</span>
-		</a>
-	</nav>
-</body>
-<script  type="text/javascript">
-	//	底部选项卡开始
-			var subpages = ['src/Listen.html', 'src/my.html', 'src/play.html', 'src/find.html','src/Account.html'];
-			var subpage_style = {
-				top: '0px',
-				bottom: '51px'
-			};
-			var aniShow = {};
-			//创建子页面，首个选项卡页面显示，其它均隐藏；
-			mui.plusReady(function() {
-				var self = plus.webview.currentWebview();
-				for(var i = 0; i < subpages.length; i++) {
-					var temp = {};
-					var sub = plus.webview.create(subpages[i], subpages[i], subpage_style);
-					if(i > 0) {
-						sub.hide();
-					} else {
-						temp[subpages[i]] = "true";
-						mui.extend(aniShow, temp);
-					}
-					self.append(sub);
-				}
-			});
-			//当前激活选项
-			var activeTab = subpages[0];
 
-			//选项卡点击事件
-			mui('.mui-bar-tab').on('tap', 'a', function(e) {
-				var targetTab = this.getAttribute('href');
-				if(targetTab == activeTab) {
-					return;
-				}
-				//显示目标选项卡
-				//若为iOS平台或非首次显示，则直接显示
-				if(mui.os.ios || aniShow[targetTab]) {
-					plus.webview.show(targetTab);
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<style>
+			.mui-active {
+				color: orange !important;
+			}
+			
+			.dian {
+				position: relative;
+			}
+			
+			#dian {
+				position: absolute;
+				right: 20px;
+				top: 5px;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+						subpages: [{
+							url: 'src/play.html',
+							id: 'play'
+						});
+		</script>
+	</head>
+
+	<body>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="src/Listen.html">
+				<span class="mui-icon iconfont icon-suo"></span>
+				<span class="mui-tab-label">听吧</span>
+			</a>
+			<a class="mui-tab-item" href="src/my.html">
+				<span class="mui-icon iconfont icon-fensi"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+
+			<a class="mui-tab-item" id="p">
+				<img src="images/74f49a2c-dc74-4bd1-a43a-9511247b6e23.jpg" width="35px" height="35px" />
+			</a>
+			<a class="mui-tab-item" href="src/find.html">
+				<span class="mui-icon iconfont icon-diqiu-copy"></span>
+				<span class="mui-tab-label">发现</span>
+			</a>
+			<a class="mui-tab-item dian" href="src/Account.html">
+				<span class="mui-icon iconfont icon-sousuoyemiantubiao"></span>
+				<span class="mui-tab-label">账号</span>
+				<div id="dian">
+
+				</div>
+			</a>
+		</nav>
+	</body>
+	<script type="text/javascript">
+		//	底部选项卡开始
+		var subpages = ['src/Listen.html', 'src/my.html', 'src/play.html', 'src/find.html', 'src/Account.html'];
+		var subpage_style = {
+			top: '0px',
+			bottom: '51px'
+		};
+		var aniShow = {};
+		//创建子页面，首个选项卡页面显示，其它均隐藏；
+		mui.plusReady(function() {
+			var self = plus.webview.currentWebview();
+			for(var i = 0; i < subpages.length; i++) {
+				var temp = {};
+				var sub = plus.webview.create(subpages[i], subpages[i], subpage_style);
+				if(i > 0) {
+					sub.hide();
 				} else {
-					//否则，使用fade-in动画，且保存变量
-					var temp = {};
-					temp[targetTab] = "true";
+					temp[subpages[i]] = "true";
 					mui.extend(aniShow, temp);
-					plus.webview.show(targetTab, "fade-in", 300);
 				}
-				//隐藏当前;
-				plus.webview.hide(activeTab);
-				//更改当前活跃的选项卡
-				activeTab = targetTab;
-			});
-			//自定义事件，模拟点击“首页选项卡”
-			document.addEventListener('gohome', function() {
-				var defaultTab = document.getElementById("defaultTab");
-				//模拟首页点击
-				mui.trigger(defaultTab, 'tap');
-				//切换选项卡高亮
-				var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
-				if(defaultTab !== current) {
-					current.classList.remove('mui-active');
-					defaultTab.classList.add('mui-active');
-				}
-			});
+				self.append(sub);
+			}
+		});
+		//当前激活选项
+		var activeTab = subpages[0];
 
-</script>
+		//选项卡点击事件
+		mui('.mui-bar-tab').on('tap', 'a', function(e) {
+			var targetTab = this.getAttribute('href');
+			if(targetTab == activeTab) {
+				return;
+			}
+			//显示目标选项卡
+			//若为iOS平台或非首次显示，则直接显示
+			if(mui.os.ios || aniShow[targetTab]) {
+				plus.webview.show(targetTab);
+			} else {
+				//否则，使用fade-in动画，且保存变量
+				var temp = {};
+				temp[targetTab] = "true";
+				mui.extend(aniShow, temp);
+				plus.webview.show(targetTab, "fade-in", 300);
+			}
+			//隐藏当前;
+			plus.webview.hide(activeTab);
+			//更改当前活跃的选项卡
+			activeTab = targetTab;
+		});
+		//自定义事件，模拟点击“首页选项卡”
+		document.addEventListener('gohome', function() {
+			var defaultTab = document.getElementById("defaultTab");
+			//模拟首页点击
+			mui.trigger(defaultTab, 'tap');
+			//切换选项卡高亮
+			var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+			if(defaultTab !== current) {
+				current.classList.remove('mui-active');
+				defaultTab.classList.add('mui-active');
+			}
+		});
+
+		document.getElementById('p').addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'src/play.html',
+				id: 'play',
+				show: { //控制打开页面的类型
+					autoShow: true,
+					//页面loaded事件发生后自动显示，默认为true 
+					aniShow: 'slide-in-bottom', //页面显示动画，默认为”slide-in-right“；  页面出现的方式 左右上下
+					duration: '300' //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒； 
+				}
+			})
+		})
+	</script>
+
 </html>

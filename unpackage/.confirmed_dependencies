@@ -1,0 +1,15 @@
+{
+	"index.html": {
+		"resources": [
+			"src/Listen.html",
+			"src/play.html"
+		],
+		"refer": [
+			"src/find.html",
+			"src/play.html",
+			"src/Listen.html",
+			"src/Account.html",
+			"src/my.html"
+		]
+	}
+}

@@ -1,0 +1,149 @@
+body,html{
+	overflow: hidden;
+}
+.fang{
+	color: #6a6a6a;
+	font-weight: 900;
+	margin-right: 5px !important;
+}
+.main{
+	width: 100%;
+	background: #FFFFFF;
+	margin-top: 10px;
+}
+.mainCon{
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	align-items: center;
+}
+.mainLeft{
+	width: 40%;
+	/*background: palegoldenrod;*/
+}
+.mainLeft i{
+	color: #999;
+	margin-right: 6px;
+	font-size: 20px;
+}
+.mainRight{
+	width: 60%;
+	/*background: pink;*/
+	text-align: right;
+	color: #b8b8b8;
+}
+.mainRight p{
+	display: inline-block;
+	border: 1px solid #f39c11;
+	border-radius: 15px;
+	padding: 2px 10px;
+	color: #F39C11;
+}
+.mainCon:nth-child(1) i{
+	color: #ffae48;
+}
+.mainCon:nth-child(2) i{
+	color: #63A5F0;
+}
+.mainCon:nth-child(3) i{
+	color: #ff8586;
+}
+.mainCon:nth-child(4) i{
+	color: #9894F6;
+}
+/*最近收听开始*/
+.listen{
+	width: 100%;
+	padding: 20px 0;
+	margin-top: 10px;
+	background: #FFFFFF;
+}
+.listenTop{
+	display: flex;
+	justify-content: space-between;
+}
+.listenLeft{
+	border-left: 5px solid #F39C11;
+	padding-left: 10px;
+	font-weight: 700;
+}
+.listenRight{
+	padding-right: 15px;
+	color: #878787;
+}
+.listenBottom{
+	width: 100%;
+	padding: 20px 15px;
+	display: flex;
+	justify-content: flex-start;
+}
+.listenPic{
+	width: 100px;
+	height: 100px;
+}
+.listenCon{
+	margin-left: 15px;
+	padding-top: 10px;
+	color: #878787;
+}
+.listenCon h4{
+	font-weight: 500;
+	color: #000000;
+}
+/*最近收听结束*/
+/*删除轮播图开始*/
+#slider{
+	padding: 10px 0;
+	height: 100px;
+	position: relative;
+}
+#slider img{
+	height: 100px;
+}
+.shanchu{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #FF0000;
+}
+/*删除轮播图结束*/
+/*关注动态开始*/
+.guanzhu{
+	width: 100%;
+	padding: 15px 0 5px 0;
+	background: #FFFFFF;
+	margin-top: 10px;
+}
+.guanzhu>h4{
+	border-left: 5px solid #F39C11;
+	padding-left: 10px;
+}
+.biaoQian{
+	display: flex;
+	justify-content: space-around;
+	padding: 15px 0;
+}
+.biaoQian div{
+	width: 40%;
+	background: #F6F6F6;
+	padding: 10px 0;
+	text-align: center;
+	border-radius: 20px;
+	color: #878787;
+}
+.guanzhu b{
+	color: #000000;
+	font-weight: 500;
+}
+.zhangjie{
+	display: flex;
+	justify-content: space-between;
+	color: #878787;
+	padding: 0 10px;
+}
+.zhangjie i{
+	font-size: 20px;
+}
+/*关注动态结束*/

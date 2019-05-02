@@ -5,18 +5,487 @@
 		<meta charset="utf-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="css/mui.css" rel="stylesheet" />
-		<style>
-			body{
-				background: pink;
-			}
-		</style>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/find.css" />
+
 	</head>
 
 	<body>
-		<script src="js/mui.js"></script>
+		<script src="../js/mui.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+					down: {
+						style: 'circle', //必选，下拉刷新样式，目前支持原生5+ ‘circle’ 样式
+						color: 'red', //可选，默认“#2BD009” 下拉刷新控件颜色
+						//		      height:'50px',//可选,默认50px.下拉刷新控件的高度,
+						//		      range:'100px', //可选 默认100px,控件可下拉拖拽的范围
+						//		      offset:'0px', //可选 默认0px,下拉刷新控件的起始位置
+						auto: true, //可选,默认false.首次加载自动上拉刷新一次
+						contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+						contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+						contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+
+						//            contentrefresh: '刷新成功',
+						callback: pulldownRefresh //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					},
+					up: {
+						height: 50, //可选.默认50.触发上拉加载拖动距离
+						//			      auto:true,//可选,默认false.自动上拉加载一次
+						contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: pullupRefresh
+					}
+
+				}
+			});
+			//		下拉
+			function pulldownRefresh() {
+				//		 	刷新延迟
+				setTimeout(function() {
+					mui('#refreshContainer').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			var count = 0;
+			//		 上拉加载
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#refreshContainer').pullRefresh().endPullupToRefresh();
+				}, 1000);
+			}
+		</script>
+
+		<!--下拉刷新容器-->
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<!--可左右拖动的选项卡-->
+				<div class="mui-slider">
+					<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<a class="mui-control-item mui-active" href="#item1">听友</a>
+						<a class="mui-control-item" href="#item2">主播</a>
+						<a class="mui-control-item" href="#item3">福利</a>
+						<a class="mui-control-item" href="#item4">活动</a>
+					</div>
+					<div class="mui-col-xs-3">
+						<div class="mui-slider-progress-bar" id="sliderProgressBar"></div>
+					</div>
+					<div class="mui-slider-group">
+						<!--听友开始-->
+						<div id="item1" class="mui-slider-item mui-control-content mui-active">
+							<!--轮播图开始-->
+							<div id="slider" class="mui-slider">
+								<div class="mui-slider-group mui-slider-loop">
+									<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#">
+											<img src="../images/1.jpg">
+										</a>
+									</div>
+									<!-- 第一张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="../images/3.jpg">
+										</a>
+									</div>
+									<!-- 第二张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="../images/4.jpg">
+										</a>
+									</div>
+									<!-- 第三张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="../images/8.jpg">
+										</a>
+									</div>
+									<!-- 第四张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="../images/1.jpg">
+										</a>
+									</div>
+									<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#">
+											<img src="../images/3.jpg">
+										</a>
+									</div>
+								</div>
+
+							</div>
+							<!--轮播图结束-->
+							<!--热门话题开始-->
+							<div class="huati">
+								<div class="huatiTop">
+									<h4>热门话题</h4>
+									<p>更多</p>
+								</div>
+								<ul class="huatiBottom">
+									<li>
+										<b>#</b>如果让你写一本小...
+									</li>
+									<li>
+										<b>#</b>阅读.更幸福
+									</li>
+									<li>
+										<b>#</b>如果回到十年前
+									</li>
+									<li>
+										<b>#</b>职场中难忘的事
+									</li>
+								</ul>
+							</div>
+							<!--热门话题结束-->
+							<!--听友会开始-->
+							<div class="ting">
+								<div class="huatiTop">
+									<h4>推荐听友会</h4>
+									<p>更多</p>
+								</div>
+								<div id="slider" class="mui-slider">
+									<div class="mui-slider-group">
+										<!-- 第一张 -->
+										<div class="mui-slider-item">
+											<div class="youhui">
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+											</div>
+										</div>
+										<!-- 第二张 -->
+										<div class="mui-slider-item">
+											<div class="youhui">
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+											</div>
+										</div>
+										<!-- 第三张 -->
+										<div class="mui-slider-item">
+											<div class="youhui">
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+											</div>
+										</div>
+										<!-- 第四张 -->
+										<div class="mui-slider-item">
+											<div class="youhui">
+												<div class="youCon">
+													<div class="youpic">
+
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+												<div class="youCon">
+													<div class="youpic">
+														<!--<img src="../images/tou.jpg" width="100%" height="100%"/>-->
+													</div>
+													<h4>许愿池</h4>
+													<p>1511人参加</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--听友会结束-->
+						</div>
+						<!--主播开始-->
+						<div id="item2" class="mui-slider-item mui-control-content">
+                             <div class="zhubo">
+                             	<div class="zhuboL">
+                             		<img src="../images/lan.png"/>
+                             	</div>
+                             	<div class="zhuboR">
+                             		<img src="../images/sheng.png"/>
+                             	</div>
+                             </div>
+                             <!--推荐开始-->
+                             <div class="tuijian">
+                             	<div class="huatiTop">
+									<h4>推荐主播</h4>
+									<p>更多</p>
+								</div>
+								<ul class="tuijianC">
+									<li>
+										<div>
+											<img src="../images/tou.jpg"/>
+										</div>
+										<p>薄荷柠檬</p>
+									</li>
+									<li>
+										<div>
+											<img src="../images/tou.jpg"/>
+										</div>
+										<p>薄荷柠檬</p>
+									</li>
+									<li>
+										<div>
+											<img src="../images/tou.jpg"/>
+										</div>
+										<p>薄荷柠檬</p>
+									</li>
+									<li>
+										<div>
+											<img src="../images/tou.jpg"/>
+										</div>
+										<p>薄荷柠檬</p>
+									</li>
+								</ul>
+                             </div>
+                             
+                             <div class="tuijian">
+                             	<div class="huatiTop">
+									<h4>新晋主播</h4>
+									<p>更多</p>
+								</div>
+								<ul class="tuijianC">
+									<li>
+										<div>
+											<img src="../images/tou.jpg"/>
+										</div>
+										<p>薄荷柠檬</p>
+									</li>
+									<li>
+										<div>
+											<img src="../images/tou.jpg"/>
+										</div>
+										<p>薄荷柠檬</p>
+									</li>
+									<li>
+										<div>
+											<img src="../images/tou.jpg"/>
+										</div>
+										<p>薄荷柠檬</p>
+									</li>
+									<li>
+										<div>
+											<img src="../images/tou.jpg"/>
+										</div>
+										<p>薄荷柠檬</p>
+									</li>
+								</ul>
+                             </div>
+                             <!--推荐结束-->
+						</div>
+						<!--福利开始-->
+						<div id="item3" class="mui-slider-item mui-control-content">
+                             <div class="xianm">
+                             	<div class="huatiTop">
+									<h4>新晋主播</h4>
+									<p>更多</p>
+								</div>
+								<div class="xiang">
+									<div class="xiangl">
+										<img src="../images/6.jpg"/ width="100%" height="100%">
+									</div>
+									<div class="xiangr">
+										<h4>要想天下:嫡女传奇</h4>
+										<div>
+											<i class="iconfont icon-luyin13"></i>&nbsp;播音风信&nbsp;&nbsp;&nbsp;
+											<i class="iconfont icon-haoping"></i>&nbsp;6.6万
+										</div>
+										<p>异世界醒来带有温柔娘亲忠心婢女,一手...</p>
+										<b>限时还剩27天</b>
+									</div>
+								</div>
+								<ul class="tao">
+									<li>
+										<img src="../images/yang.png"/>
+										<p>陶晓乖AB面(一)</p>
+										限免还剩43天
+									</li>
+									<li>
+										<img src="../images/wo.png"/>
+										<p>陶晓乖AB面(一)</p>
+										限免还剩43天
+									</li>
+									<li>
+										<img src="../images/zui.png"/>
+										<p>陶晓乖AB面(一)</p>
+										限免还剩43天
+									</li>
+									<li>
+										<img src="../images/wo.png"/>
+										<p>陶晓乖AB面(一)</p>
+										限免还剩43天
+									</li>
+								</ul>
+                             </div>
+                              <div class="xianm">
+                             	<div class="huatiTop">
+									<h4>新晋主播</h4>
+									<p>更多</p>
+								</div>
+								<div class="xiang">
+									<div class="xiangl">
+										<img src="../images/6.jpg"/ width="100%" height="100%">
+									</div>
+									<div class="xiangr">
+										<h4>要想天下:嫡女传奇</h4>
+										<div>
+											<i class="iconfont icon-luyin13"></i>&nbsp;播音风信&nbsp;&nbsp;&nbsp;
+											<i class="iconfont icon-haoping"></i>&nbsp;6.6万
+										</div>
+										<p>异世界醒来带有温柔娘亲忠心婢女,一手...</p>
+										<b>限时还剩27天</b>
+									</div>
+								</div>
+								<ul class="tao">
+									<li>
+										<img src="../images/yang.png"/>
+										<p>陶晓乖AB面(一)</p>
+										限免还剩43天
+									</li>
+									<li>
+										<img src="../images/wo.png"/>
+										<p>陶晓乖AB面(一)</p>
+										限免还剩43天
+									</li>
+									<li>
+										<img src="../images/zui.png"/>
+										<p>陶晓乖AB面(一)</p>
+										限免还剩43天
+									</li>
+									<li>
+										<img src="../images/wo.png"/>
+										<p>陶晓乖AB面(一)</p>
+										限免还剩43天
+									</li>
+								</ul>
+                             </div>
+						</div>
+						<!--活动开始-->
+						<div id="item4" class="mui-slider-item mui-control-content">
+                            <div class="huo">
+                            	<h4>【听书送券】选一本书打骨折</h4>
+                            	<img src="../images/2.jpg"/>
+                            	<div class="ju">
+                            		<div class="con">
+                            			<i class="iconfont icon-shizhong"></i>2019年3月18日
+                            		</div>
+                            		<p>已结束</p>
+                            	</div>
+                            </div>
+                            <div class="huo ha">
+                            	<h4>【听书送券】选一本书打骨折</h4>
+                            	<img src="../images/3.jpg"/>
+                            	<div class="ju">
+                            		<div class="con">
+                            			<i class="iconfont icon-shizhong"></i>2019年3月18日
+                            		</div>
+                            		<p>已结束</p>
+                            	</div>
+                            </div>
+                            <div class="huo ha">
+                            	<h4>【听书送券】选一本书打骨折</h4>
+                            	<img src="../images/3.jpg"/>
+                            	<div class="ju">
+                            		<div class="con">
+                            			<i class="iconfont icon-shizhong"></i>2019年3月18日
+                            		</div>
+                            		<p>已结束</p>
+                            	</div>
+                            </div>
+                            <div class="huo ha">
+                            	<h4>【听书送券】选一本书打骨折</h4>
+                            	<img src="../images/3.jpg"/>
+                            	<div class="ju">
+                            		<div class="con">
+                            			<i class="iconfont icon-shizhong"></i>2019年3月18日
+                            		</div>
+                            		<p>已结束</p>
+                            	</div>
+                            </div>
+                            <div class="huo ha">
+                            	<h4>【听书送券】选一本书打骨折</h4>
+                            	<img src="../images/3.jpg"/>
+                            	<div class="ju">
+                            		<div class="con">
+                            			<i class="iconfont icon-shizhong"></i>2019年3月18日
+                            		</div>
+                            		<p>已结束</p>
+                            	</div>
+                            </div>
+						</div>
+					</div>
+				</div>
+				<!--可左右拖动的选项卡结束-->
+			</div>
+		</div>
+		<script>
+//						//获得slider插件对象
+//						var gallery = mui('.mui-slider');
+//						gallery.slider({
+//							interval: 1000 //自动轮播周期，若为0则不自动播放，默认为0；
+//						});
 		</script>
 	</body>
 
