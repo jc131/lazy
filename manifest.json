@@ -139,6 +139,13 @@
 					"src/my.html"
 				],
 				"priority": 0
+			},
+			"src/Account.html": {
+				"resources": [],
+				"refer": [
+					"src/zhanghao/zhuye.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {

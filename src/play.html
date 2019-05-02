@@ -6,6 +6,8 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/play.css"/>
 		<style>
 			body{
 				background: url(../images/yang.png)no-repeat;
@@ -14,7 +16,8 @@
 			.mui-content{
 				width: 100%;
 				height: 100%;
-				background: rgba(10,10,10,0.8) !important;
+				background: rgba(51,45,43,0.9) !important;
+				border-top: 1px solid #000000;
 			}
 		</style>
 	</head>
@@ -25,10 +28,68 @@
 			mui.init()
 		</script>
 		<div class="mui-content" id="play">
-			<header class="mui-bar mui-bar-nav">
-			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			    <h1 class="mui-title">标题</h1>
+			<header class="mui-bar mui-bar-nav header">
+			    <a class="mui-action-back mui-icon mui-icon-arrowdown mui-pull-left"></a>
+			    <h4 class="mui-pull-left">第335集_养鬼为祸</h4>
+			    <a class="iconfont icon-119 mui-pull-right"></a>
+			    <a class="iconfont icon-fenxiang mui-pull-right"></a>
 			</header>
+			<!--中间圆开始-->
+			<div class="conPic">
+			</div>
+			<!--中间圆结束-->
+			<!--收藏开始-->
+			<div class="cang">
+				<ul class="cangCon">
+					<li>
+						<a class="iconfont icon-shoucang"></a>
+						<p>收藏</p>
+					</li>
+					<li>
+						<a class="iconfont icon-shizhong"></a>
+						<p>定时</p>
+					</li>
+					<li>
+						<a class="iconfont icon-beisu"></a>
+						<p>倍速</p>
+					</li>
+					<li>
+						<a class="iconfont icon-gavin-copy"></a>
+						<p>列表</p>
+					</li>
+				</ul>
+			</div>
+			<!--收藏结束-->
+			<!--进度条开始-->
+			<div class="jindu">
+				<div class="jinLeft">
+					
+				</div>
+				<div class="jinCon">
+					
+				</div>
+				<div class="jinRight">
+					
+				</div>
+			</div>
+			<!--进度条结束-->
+			<!--控制键开始-->
+			<div class="kongzi">
+				<ul class="kongziCon">
+					<li>
+						<a class="iconfont icon-kuaitui"></a>
+					</li>
+					<li>
+						<a class="iconfont icon-shangyige"></a>
+					</li>
+					<li>
+						<a class="iconfont icon-bofang1"></a>
+					</li>
+					<li><a class="iconfont icon-ai10"></a></li>
+					<li><a class="iconfont icon-kuaijin"></a></li>
+				</ul>
+			</div>
+			<!--控制键结束-->
 		</div>
 	</body>
 

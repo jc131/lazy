@@ -11,5 +11,10 @@
 			"src/Account.html",
 			"src/my.html"
 		]
+	},
+	"src/Account.html": {
+		"refer": [
+			"src/zhanghao/zhuye.html"
+		]
 	}
 }

@@ -1,0 +1,106 @@
+/*头开始*/
+body,html{
+	overflow: hidden;
+}
+.header{
+	background: none;
+	box-shadow: none;
+}
+.header a{
+	color: #FFFFFF;
+	font-size: 20px;
+}
+.header a.mui-icon-arrowdown{
+	color: #FFFFFF;
+	font-size: 35px;
+}
+.header h4{
+	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+.icon-fenxiang{
+	margin-top: 20px;
+	margin-right: 10px;
+}
+.icon-119{
+	margin-top: 18px;
+}
+/*头结束*/
+/*中间圆开始*/
+.conPic{
+	width: 250px;
+	height: 250px;
+	border: 5px solid #726755;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-top: 150px;
+	background: url(../images/yang.png);
+}
+/*中间圆结束*/
+/*收藏开始*/
+.cangCon{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+	list-style: none;
+	margin-top: 50px;
+}
+.cangCon li{
+	width: 20%;
+	padding-top: 10px;
+	/*background: palegoldenrod;*/
+	text-align: center;
+}
+.cangCon li a{
+	color: #FFFFFF;
+	font-size: 22px;
+}
+.cangCon li p{
+	color: #ffffff;
+	margin-top: 10px;
+}
+/*收藏结束*/
+/*进度条开始*/
+
+
+
+
+.jindu{
+	height: 50px;
+	background: #F39C11;
+}
+/*进度条结束*/
+/*控制键开始/*/
+.kongziCon{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+}
+.kongziCon li{
+	width: 20%;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	/*background: pink;*/
+}
+.kongziCon li a{
+	font-size: 40px;
+	color: #F39C11;
+}
+.kongziCon li:nth-child(1) a{
+	color: #FFFFFF;
+}
+.kongziCon li:nth-child(5) a{
+	color: #FFFFFF;
+}
+.kongziCon li:nth-child(3) a{
+	font-size: 60px;
+}
+/*控制键结束*/
+
+
