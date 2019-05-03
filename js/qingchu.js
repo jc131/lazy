@@ -1,0 +1,15 @@
+$(function(){
+	$('#qingchu').click(function(){
+		$('#qingkong').fadeIn();
+	})
+	$('.qingL').click(function(){
+		$('#qingkong').fadeOut();
+	})
+	$('.qingR').click(function(){
+		$('#qingkong').fadeOut();
+		$('.xuan').hide();
+	})
+	$('#xia').click(function(){
+		$('.tuP').fadeOut();
+	})
+})

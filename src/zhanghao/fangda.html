@@ -6,30 +6,34 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="../../css/fangda.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/fangda.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css"/>
+		<script src="../../js/jquery-1.11.1.min.js"></script>
 	</head>
 
 	<body>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/qingchu.js"></script>
+		<script src="../../js/swiper.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
 		</script>
 		<div class="mui-content" id="jing">
 			<!--头开始-->
 			<header class="header">
-			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			    <div class="inp">
-			    	<i class="mui-icon mui-icon-search"></i>
-			    	<input type="text" placeholder="书名/节目/主播"/>
-			    </div>
-			    <a class="mui-action-back">取消</a>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<div class="inp">
+					<i class="mui-icon mui-icon-search"></i>
+					<input type="text" placeholder="书名/节目/主播" />
+				</div>
+				<a class="mui-action-back">取消</a>
 			</header>
 			<!--头结束-->
 			<!--搜索历史开始-->
 			<div class="liShi">
 				<div class="sou">
 					<p class="mui-pull-left">搜索历史</p>
-					<i class="mui-icon mui-icon-trash mui-pull-right"></i>
+					<i class="mui-icon mui-icon-trash mui-pull-right" id="qingchu"></i>
 				</div>
 				<ul class="xuan">
 					<li>黄金瞳</li>
@@ -39,7 +43,335 @@
 				</ul>
 			</div>
 			<!--搜素历史结束-->
+			<div class="swiper-container one tuP">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide  ">
+						<img src="../../images/1.jpg" />
+					</div>
+					<div class="swiper-slide  ">
+						<img src="../../images/4.jpg" />
+					</div>
+					<div class="swiper-slide  ">
+						<img src="../../images/7.jpg" />
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="mui-icon mui-icon-close" id="xia"></div>
+			</div>
+
+			<div class="mui-slider">
+				<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-scroll-wrapper navTop">
+					<div class="mui-scroll">
+						<a class="mui-control-item" href="#item1" class="mui-active" style="color: #F39C11 !important;">热搜</a>
+						<a class="mui-control-item" href="#item2">小说</a>
+						<a class="mui-control-item" href="#item3">出版</a>
+						<a class="mui-control-item" href="#item4">儿童</a>
+						<a class="mui-control-item" href="#item5">节目</a>
+						<a class="mui-control-item" href="#item6">阅读</a>
+						<a class="mui-control-item" href="#item7">主播</a>
+						<a class="mui-control-item" href="#item8">课程</a>
+					</div>
+				</div>
+				<div class="mui-slider-group">
+					<div id="item1" class="mui-slider-item mui-control-content">
+						<div class="resou">
+							<b class="red">1</b>会员充送
+							<p>充一年送半年,低价!</p>
+						</div>
+						<div class="resou">
+							<b class="red1">2</b>精品童书买一送一
+							<p>五一限时抢购</p>
+						</div>
+						<div class="resou">
+							<b class="red2">3</b>权利游戏
+							<p>最冬季来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">4</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">5</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">6</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+
+						<div class="resou">
+							<b class="red3">7</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">8</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">9</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">10</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+					</div>
+					<div id="item2" class="mui-slider-item mui-control-content">
+						<div class="resou">
+							<b class="red">1</b>会员充送
+							<p>充一年送半年,低价!</p>
+						</div>
+						<div class="resou">
+							<b class="red1">2</b>精品童书买一送一
+							<p>五一限时抢购</p>
+						</div>
+						<div class="resou">
+							<b class="red2">3</b>权利游戏
+							<p>最冬季来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">4</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">5</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">6</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+					</div>
+					<div id="item3" class="mui-slider-item mui-control-content">
+						<div class="resou">
+							<b class="red">1</b>会员充送
+							<p>充一年送半年,低价!</p>
+						</div>
+						<div class="resou">
+							<b class="red1">2</b>精品童书买一送一
+							<p>五一限时抢购</p>
+						</div>
+						<div class="resou">
+							<b class="red2">3</b>权利游戏
+							<p>最冬季来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">4</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">5</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">6</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">7</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">8</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">9</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+					</div>
+					<div id="item4" class="mui-slider-item mui-control-content">
+						<div class="resou">
+							<b class="red">1</b>会员充送
+							<p>充一年送半年,低价!</p>
+						</div>
+						<div class="resou">
+							<b class="red1">2</b>精品童书买一送一
+							<p>五一限时抢购</p>
+						</div>
+						<div class="resou">
+							<b class="red2">3</b>权利游戏
+							<p>最冬季来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">4</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">5</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">6</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+					</div>
+					<div id="item5" class="mui-slider-item mui-control-content">
+						<div class="resou">
+							<b class="red">1</b>会员充送
+							<p>充一年送半年,低价!</p>
+						</div>
+						<div class="resou">
+							<b class="red1">2</b>精品童书买一送一
+							<p>五一限时抢购</p>
+						</div>
+						<div class="resou">
+							<b class="red2">3</b>权利游戏
+							<p>最冬季来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">4</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">5</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">6</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">7</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">8</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">9</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+					</div>
+					<div id="item6" class="mui-slider-item mui-control-content">
+						<div class="resou">
+							<b class="red">1</b>会员充送
+							<p>充一年送半年,低价!</p>
+						</div>
+						<div class="resou">
+							<b class="red1">2</b>精品童书买一送一
+							<p>五一限时抢购</p>
+						</div>
+						<div class="resou">
+							<b class="red2">3</b>权利游戏
+							<p>最冬季来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">4</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">5</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">6</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+					</div>
+					<div id="item7" class="mui-slider-item mui-control-content">
+						<div class="resou">
+							<b class="red">1</b>会员充送
+							<p>充一年送半年,低价!</p>
+						</div>
+						<div class="resou">
+							<b class="red1">2</b>精品童书买一送一
+							<p>五一限时抢购</p>
+						</div>
+						<div class="resou">
+							<b class="red2">3</b>权利游戏
+							<p>最冬季来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">4</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">5</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">6</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">7</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">8</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">9</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+					</div>
+					<div id="item8" class="mui-slider-item mui-control-content">
+						<div class="resou">
+							<b class="red">1</b>会员充送
+							<p>充一年送半年,低价!</p>
+						</div>
+						<div class="resou">
+							<b class="red1">2</b>精品童书买一送一
+							<p>五一限时抢购</p>
+						</div>
+						<div class="resou">
+							<b class="red2">3</b>权利游戏
+							<p>最冬季来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">4</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">5</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+						<div class="resou">
+							<b class="red3">6</b>总裁夫人休想逃
+							<p>天价来袭</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--清空历史开始-->
+			<div id="qingkong">
+				<div class="tishi">
+					<h4>提示</h4><br />
+					<p>确定清除搜索历史吗?</p>
+					<div class="qingchu">
+						<div class="qingL">取消</div>
+						<div class="qingR">清除</div>
+					</div>
+				</div>
+			</div>
+			<!--清空历史结束-->
 		</div>
+		
+		
+		<script>
+ 	 var swiper = new Swiper('.one ', {
+      pagination: {
+      	//分页器容器的css选择器或HTML标签。分页器等组件可以置于container之外，
+      	//不同Swiper的组件应该有所区分，如#pagination1，#pagination2。
+        el: '.swiper-pagination',//el  获取分页器的css选择器
+      },
+      loop: true,
+      autoplay: {
+      //设置为true启动自动切换，并使用默认的切换设置。 默认false
+        delay: 1000,
+        //delay 自动切换的时间间隔，单位ms
+        disableOnInteraction: false,
+        //用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+				//如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
+				//操作包括触碰，拖动，点击pagination等。
+      },
+   });
+ </script>
+
 	</body>
 
 </html>

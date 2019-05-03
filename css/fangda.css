@@ -59,3 +59,104 @@ body,html{
 	font-size: 15px;
 }
 /*头结束*/
+.tuP{
+	height: 80px !important;
+	margin: 10px 0 !important;
+	position: relative;
+}
+#xia{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	z-index: 100;
+	color: #FF0000;
+	font-weight: 700;
+}
+.tuP img{
+	width: 100%;
+	height: 80px !important;
+}
+.navTop{
+	border: none;
+	background: #FFFFFF;
+}
+.navTop a{
+	width: 50px !important;
+	color: #000000 !important;
+	border: none !important;
+	font-weight: 600;
+}
+.navTop .mui-active{
+	background: none !important;
+	color: #F39C11 !important;
+	border-bottom: 2px solid #F39C11 !important;
+}
+.resou{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border: none;
+	background: #FFFFFF;
+}
+.resou b{
+	margin: 0 15px;
+}
+.red{
+	color: red;
+}
+.resou p{
+	border: 1px solid #FF0000;
+	margin: 10px 0 10px 15px;
+	font-size: 12px;
+	padding: 0 5px;
+	color: #FF0000;
+}
+.red1{
+	color: #FD4E4E;
+}
+.red2{
+	color: #F39C11;
+}
+.red3{
+	color: #878787;
+}
+/*清空历史开始*/
+#qingkong{
+	
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 100;
+    padding-top: 50%;
+   padding-left: 70px;
+    display: none;
+}
+.tishi{
+	width: 80%;
+	background: #FFFFFF;
+	text-align: center;
+	padding-top: 30px;
+}
+.qingchu{
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #F9F9F9;
+	margin-top: 20px;
+}
+.qingL{
+	width: 50%;
+	text-align: center;
+	padding: 10px 0;
+	border-right: 1px solid #F2F2F2;
+}
+.qingR{
+	width: 50%;
+	text-align: center;
+	padding: 10px 0;
+}
+/*清空历史结束*/
