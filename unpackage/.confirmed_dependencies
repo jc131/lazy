@@ -1,26 +1,26 @@
 {
-	"index.html": {
-		"resources": [
-			"src/Listen.html",
-			"src/play.html",
-			"src/find.html"
-		],
-		"refer": [
-			"src/find.html",
-			"src/play.html",
-			"src/Listen.html",
-			"src/Account.html",
-			"src/my.html"
-		]
-	},
-	"src/Account.html": {
-		"refer": [
-			"src/zhanghao/zhuye.html"
-		]
-	},
-	"src/my.html": {
-		"refer": [
-			"src/zhanghao/fangda.html"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "src/Listen.html",
+      "src/play.html",
+      "src/find.html"
+    ],
+    "refer": [
+      "src/find.html",
+      "src/play.html",
+      "src/Listen.html",
+      "src/Account.html",
+      "src/my.html"
+    ]
+  },
+  "src/Account.html": {
+    "refer": [
+      "src/zhanghao/zhuye.html"
+    ]
+  },
+  "src/my.html": {
+    "refer": [
+      "src/zhanghao/fangda.html"
+    ]
+  }
 }
