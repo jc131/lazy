@@ -58,7 +58,7 @@
 		<!--头开始-->
 		<header class="mui-bar mui-bar-nav">
 			<h1 class="mui-title">我的</h1>
-			<a class="mui-icon mui-icon-search mui-pull-right fang"></a>
+			<a class="mui-icon mui-icon-search mui-pull-right fang" id="jing"></a>
 		</header>
 		<!--头结束-->
 		<div class="mui-content">
@@ -314,6 +314,15 @@
 			gallery.slider({
 				interval: 1000 //自动轮播周期，若为0则不自动播放，默认为0；
 			});
+			
+			
+			document.getElementById('jing').addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'zhanghao/fangda.html',
+					id: 'jing'
+
+				})
+			})	
 		</script>
 	</body>
 

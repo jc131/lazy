@@ -8,6 +8,7 @@
 		<link href="../css/mui.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="../css/Acconunt.css" />
+		<script src="../js/xiaoshi.js"></script>
 	</head>
 
 	<body>
@@ -50,10 +51,10 @@
 						<i class="iconfont icon-pinglun"></i>
 						<p>评论</p>
 					</li>
-					<li>
+					<li id="to">
 						<i class="iconfont icon-119"></i>
 						<p>消息</p>
-						<div class="zhuzi">2</div>
+						<div class="zhuzi" id="er">2</div>
 					</li>
 				</ul>
 			</div>
@@ -149,15 +150,13 @@
 		</div>
 
 		<script>
-//			mui.init({
-							document.getElementById('touPic').addEventListener('tap', function() {
-								mui.openWindow({
-									url: 'zhanghao/zhuye.html',
-									id: 'zhuye'
-	
-								})
-							})
-//					})
+			document.getElementById('touPic').addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'zhanghao/zhuye.html',
+					id: 'zhuye'
+
+				})
+			})			
 		</script>
 	</body>
 

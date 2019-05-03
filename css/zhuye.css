@@ -1,0 +1,169 @@
+/*头开始*/
+body,html{
+	overflow: hidden
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 10px;
+	height: 180px;
+	background: -webkit-linear-gradient(#000, #1e2f42);
+	/* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#000, #1e2f42);
+	/* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#000, #1e2f42);
+	/* Firefox 3.6 - 15 */
+	background: linear-gradient(#000, #1e2f42);
+	/* 标准的语法 */
+	text-align: center;
+}
+
+.header a {
+	color: #FFFFFF;
+	font-size: 25px;
+}
+.header h4,p{
+	color: #FFFFFF;
+	margin: 10px 0;
+}
+.header .touxiang{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background: url(../images/tou.jpg);
+	border: 2px solid #FFFFFF;
+	background-size: 100% 100%;
+	margin: 0 auto;
+}
+
+/*头结束*/
+/*main开始*/
+.navTop{
+	border: none;
+	background: #FFFFFF;
+}
+.navTop a{
+	color: #000000 !important;
+	border: none !important;
+	font-weight: 600;
+}
+.navTop>.mui-active{
+	background: none !important;
+	color: #F39C11 !important;
+	border-bottom: 2px solid #F39C11 !important;
+}
+.con{
+	text-align: center;
+	margin-top: 150px;
+}
+.con p{
+	color: #878787;
+}
+/*main结束*/
+/*听单开始*/
+.zhuye{
+	padding: 15px 0 0 0;
+	background: #FFFFFF;
+	margin-top: 10px;
+}
+.tin h4{
+	color: #000000;
+	border-left: 5px solid #F39C11;
+	padding-left: 10px;
+}
+.book{
+	padding: 15px;
+	display: flex;
+	justify-content: flex-start;
+}
+.bookPic{
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+}
+.bookCon p{
+	color: #000000;
+	font-weight: 600;
+	margin-top: 2px;
+}
+.bookCon div{
+	color: #878787;
+}
+/*听单结束*/
+/*分享开始*/
+.fenxiang{
+	z-index: 100;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.fenTop{
+	height: 70%;
+	width: 100%;
+	background: rgba(0,0,0,0.8);
+}
+.fenBottom{
+	width: 100%;
+	height: 30%;
+	background: #FFFFFF;
+}
+.fenBottom p{
+	color: #000000;
+	margin: 0;
+	text-align: center;
+	padding: 15px 0;
+	font-weight: 700;
+	font-size: 16px;
+}
+.bookcontent{
+	height: 100px !important;
+	/*background: pink;*/
+}
+.fenZi{
+	color: #878787 !important;
+	font-size: 15px !important;
+	margin-top: -15px !important;
+}
+.fenPic{
+	width: 50px;
+	height: 50px;
+	background: #e9d44f;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	margin-top: 13px;
+}
+.fenPic i{
+	border: none !important;
+	font-size: 30px !important;
+	color: #FFFFFF;
+}
+.fenPic1{
+	background: #74c43f;
+}
+.fenPic2{
+	background: #30abf2;
+}
+.fenPic3{
+	background: #f4c73d;
+}
+.fenPic4{
+	background: #ea4848;
+}
+.fenPic5{
+	background: #878787;
+}
+.quxiao{
+	text-align: center;
+	border-top: 1px solid #C8C7CC;
+	border-bottom: 1px solid #C8C7CC;
+	padding: 11px;
+	font-weight: 700;
+	font-size: 18px;
+}
+/*分享结束*/

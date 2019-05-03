@@ -1,0 +1,61 @@
+body,html{
+	overflow: hidden;
+}
+/*头开始*/
+.header{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	align-items: center;
+	height: 45px;
+	background: #FFFFFF;
+	color: #878787;
+	
+}
+.header a{
+	color: #333333;
+}
+.inp{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 30px;
+	background: #eee;
+	border-radius: 20px;
+	padding: 0 10px;
+}
+.inp input{
+	margin-top: 15px;
+	height: 30px;
+	border: none;
+	background: #eee;
+	margin-left: -10px;
+	color: #FF0000;
+}
+.inp i{
+	z-index: 10;
+}
+.liShi{
+	background: #FFFFFF !important;
+	padding: 15px 0;
+}
+.sou{
+	padding: 0 15px 15px 15px;
+}
+.xuan{
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	padding: 0 10px;
+	margin-top: 20px;
+}
+.xuan li{
+	width: 22%;
+	background: #EEEEEE;
+	text-align: center;
+	border-radius: 20px;
+	padding: 3px 0;
+	font-size: 15px;
+}
+/*头结束*/

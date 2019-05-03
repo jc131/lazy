@@ -6,6 +6,11 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/zhuye.css"/>
+		
+		<script src="../../js/jquery-1.11.1.min.js"></script>
+		<script src="../../js/fenxiang.js"></script>
 	</head>
 
 	<body>
@@ -14,12 +19,175 @@
 			mui.init()
 		</script>
 		<div class="mui-content" id="zhuye">
+			<!--头开始-->
 			<header class="header">
 				<a class="mui-action-back mui-icon mui-icon-arrowleft"></a>
 				<div class="zhangPic">
-					
+					 <div class="touxiang">
+					 	<!--<img src="../../images/tou.jpg"/>-->
+					 </div>
+					 <h4>呵呵哒</h4>
+					 <p>我是懒人我骄傲</p>
 				</div>
+				<a class="iconfont icon-fenxiang" id="fenxiang"></a>
 			</header>
+			<!--头结束-->
+			<!--main开始-->
+			<div class="mui-slider">
+			    <div class="mui-slider-indicator mui-segmented-control navTop">
+			        <a class="mui-control-item" href="#item1" class="mui-active active" style="color: #F39C11;">主页</a>
+			        <a class="mui-control-item" href="#item2">帖子</a>
+			        <a class="mui-control-item" href="#item3">评论</a>
+			        <a class="mui-control-item" href="#item4">关注</a>
+			        <a class="mui-control-item" href="#item5">粉丝</a>
+			    </div>
+			    <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-2"></div>
+			    <div class="mui-slider-group">
+			        <div id="item1" class="mui-slider-item mui-control-content">
+			            <div class="zhuye">
+			            	<!--听单开始-->
+			            	<div class="tin">
+			            		<h4>创建的听单</h4>
+			            	</div>
+			            	<div class="book">
+			            		<div class="bookPic">
+			            			<img src="../../images/yang.png"/>
+			            		</div>
+			            		<div class="bookCon">
+			            			<p>我喜欢的书籍</p>
+			            			<div>
+			            				<i class="iconfont icon-shizhong"></i>&nbsp;&nbsp;01月25日&nbsp;&nbsp;&nbsp;&nbsp;
+			            				<i class="iconfont icon-shu1"></i>&nbsp;&nbsp;4本&nbsp;&nbsp;&nbsp;&nbsp;
+			            				<i class="iconfont icon-shoucang"></i>&nbsp;&nbsp;0人
+			            			</div>
+			            		</div>
+			            	</div>
+			            	<!--听单结束-->  	
+			            </div>
+			            <!--常听开始-->
+			            <div class="zhuye">
+			            	<!--听单开始-->
+			            	<div class="tin">
+			            		<h4>最近常听</h4>
+			            	</div>
+			            	<div class="book">
+			            		<div class="bookPic">
+			            			<img src="../../images/yang.png"/>
+			            		</div>
+			            		<div class="bookCon">
+			            			<p>养鬼为祸(又名:劫天运)</p>
+			            			<div>
+			            				<i class="iconfont icon-luyin13"></i>&nbsp;&nbsp;空白
+			            				
+			            			</div>
+			            		</div>
+			            	</div>
+			            	
+			            	<div class="book">
+			            		<div class="bookPic">
+			            			<img src="../../images/zui.png"/>
+			            		</div>
+			            		<div class="bookCon">
+			            			<p>最后一个阴阳师</p>
+			            			<div>
+			            				<i class="iconfont icon-luyin13"></i>&nbsp;&nbsp;神秘kook
+			            				
+			            			</div>
+			            		</div>
+			            	</div>
+			            	
+			            	<div class="book">
+			            		<div class="bookPic">
+			            			<img src="../../images/wo.png"/>
+			            		</div>
+			            		<div class="bookCon">
+			            			<p>灵异怪谈</p>
+			            			<div>
+			            				<i class="iconfont icon-luyin13"></i>&nbsp;&nbsp;paul
+			            				
+			            			</div>
+			            		</div>
+			            	</div>
+			            	<!--听单结束-->  	
+			            </div>	
+			            <!--常听结束-->
+			        </div>
+			        <div id="item2" class="mui-slider-item mui-control-content">
+			            <div class="con">
+			            	<h4>暂时还没有帖子</h4>
+			            	<p>通过帖子可以查看使用懒人听书历程</p>
+			            </div>
+			        </div>
+			        <div id="item3" class="mui-slider-item mui-control-content">
+			            <div class="con">
+			            	<h4>暂时还没有评论</h4>
+			            	<p>通过帖子可以查看使用懒人听书历程</p>
+			            </div>
+			        </div>
+			        <div id="item4" class="mui-slider-item mui-control-content">
+			           <div class="con">
+			            	<h4>暂时还没有关注</h4>
+			            	<p>通过帖子可以查看使用懒人听书历程</p>
+			            </div>
+			        </div>
+			        <div id="item5" class="mui-slider-item mui-control-content">
+			            <div class="con">
+			            	<h4>暂时还没有粉丝</h4>
+			            	<p>通过帖子可以查看使用懒人听书历程</p>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!--main结束-->
+			<!--分享开始-->
+			<div class="fenxiang">
+				<div class="fenTop"></div>
+				<div class="fenBottom">
+					<p>分享内容到</p>
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted bookcontent">
+					    <div class="mui-scroll">
+					        <a class="mui-control-item">
+					            <div class="fenPic">
+					            	<i class="mui-icon mui-icon-pengyouquan"></i>	
+					            </div>
+					            <p class="fenZi">朋友圈</p>
+					        </a>
+					        <a class="mui-control-item">
+					            <div class="fenPic fenPic1">
+					            	<i class="mui-icon mui-icon-weixin"></i>	
+					            </div>
+					            <p class="fenZi">微信好友</p>
+					        </a>
+					        <a class="mui-control-item">
+					            <div class="fenPic fenPic2">
+					            	<i class="mui-icon mui-icon-qq"></i>	
+					            </div>
+					            <p class="fenZi">QQ好友</p>
+					        </a>
+					        <a class="mui-control-item">
+					            <div class="fenPic fenPic3">
+					            	<i class="mui-icon mui-icon-star"></i>	
+					            </div>
+					            <p class="fenZi">QQ空间</p>
+					        </a>
+					        <a class="mui-control-item">
+					             <div class="fenPic fenPic4">
+					            	<i class="mui-icon mui-icon-weibo"></i>	
+					            </div>
+					            <p class="fenZi">新浪微博</p>
+					        </a>
+					        <a class="mui-control-item">
+					            <div class="fenPic fenPic5">
+					            	<i class="mui-icon mui-icon-more"></i>	
+					            </div>
+					            <p class="fenZi">更多</p>
+					        </a>
+					    </div>
+					</div>
+					<div class="quxiao" id="quxiao">取消</div>
+				</div>
+			</div>
+			<!--分享结束-->
 		</div>
 	</body>
 
